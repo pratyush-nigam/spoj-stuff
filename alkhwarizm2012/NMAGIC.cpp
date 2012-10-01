@@ -17,15 +17,17 @@ int main()
 		for(i=0;i<n;i++)
 		{
 			if(s[i]=='4')
-				s[i] = 0;
+				s1[i] = 0;
 			else
-				s[i] = 1;	
+				s1[i] = 1;	
 		}
 		int c=0,a;
 		i=n-1;
-		int s2[n+2],flg=0;
+		string s2 = "";
+		int flg=0;
 		while(i>=0)
 		{
+			cout << "s[i]  = " << s[i] << endl; 
 			if(flg==0)
 			{
 				flg=1;
@@ -34,21 +36,23 @@ int main()
 			}
 			else
 			{
-				a = (s1[i]+1)%2;
-				c = (s1[i]+1)/2;
+				a = (s1[i]+c)%2;
+				c = (s1[i]+c)/2;
 			}
-			if(a%2==0)
-				s2[i] = 1;
+			cout << i << " = " <<  a << " " << s2 << endl;
+			if(a==0)
+				s2 = '4' + s2;
 			else
-				s2[i] = 7;	
+				s2 = '7' + s2;	
 			i--;
 		}
-		if(c)
+		if(c==1)
 		{
-			s2 = 4;
+			s2 = s2 + '4';
 		}
-		else
-			s2 = 7;
+		/*else
+			s2 = s2 + '7';*/
+		cout << s2 << endl;
 	}
 	return 0;
 }
