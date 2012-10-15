@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	int a[7] = {1,2,3,4,3,2,1};
+	int a[6] = {1,2,4,3,2,1};
 	int n = 7;
 	int r=n-1,l=0,lt,rt;
 	while((r-l) > 2)
