@@ -3,20 +3,32 @@ class Solution {
 		void sortColors(int A[], int n) {
 			// Start typing your C/C++ solution below
 			// DO NOT write int main() function
-			int l=0,m=0,h=n-1;
-			while(m<=h)
+			int a=0,b=0,c=0,i;
+			for(i=0;i<n;i++)
 			{
-				if(A[m]==0)
+				if(A[i]==0)
+					a++;
+				else if(A[i]==1)
+					b++;
+				else if(A[i]==2)
+					c++;
+			}
+			for(i=0;i<n;i++)
+			{
+				if(a>0)
 				{
-					A[m++] = A[l];
-					A[l++]=0;
+					A[i]=0;
+					a--;
 				}
-				else if(A[m]==1)
-					m++;
-				else if(A[m]==2)
+				else if(b>0)
 				{
-					A[m] = A[h];
-					A[h--]=2;
+					A[i]=1;
+					b--;
+				}
+				else if(c>0)
+				{
+					A[i]=2;
+					c--;
 				}
 			}
 			return;
