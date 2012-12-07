@@ -1,7 +1,9 @@
 #include<stdio.h>
-int main()
+
+int numarray[8] = {1, 2, 3, 4, 5, 6, 7, 8};
+main()
 {
-	for(;1;)
-		printf("\nguess");
-	return 0;
+	int i, sum = 0;
+	for(i = 0; i <= 7; ++i)
+		sum+=numarray[i];
 }
