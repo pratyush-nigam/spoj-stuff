@@ -23,7 +23,6 @@ public:
                 else
                 {
                     len = l[len-1];
-                    i++;
                 }
             }
         }
